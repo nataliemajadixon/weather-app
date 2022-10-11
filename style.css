@@ -9,12 +9,33 @@ font-family: 'Roboto Condensed', sans-serif; */
     box-sizing: border-box;
 }
 
+#topbar{
+    background-color: rgb(153, 198, 248);
+}
+
+#toptext{
+    font-family: 'Roboto Condensed', sans-serif; 
+    text-align: center;
+    font-size: 42px;
+}
+
 body{
     font-family: 'Inter', sans-serif;
 }
+.display{
+    text-align: center;
+}
+
+main{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3%
+}
+
 .input{
-    text-align:center;
-    margin: 100px;
+    margin: 100px 0px 0px 150px;
 }
 
 input[type="text"]{
@@ -26,4 +47,17 @@ input[type="text"]{
     font-size: 20px;
     border: none;
     border-radius: 10px;
+    padding: 10px 10px;
 }
+input[type="submit"]{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(236, 241, 203);
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
