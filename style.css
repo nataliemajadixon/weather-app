@@ -8,17 +8,71 @@ font-family: 'Roboto Condensed', sans-serif; */
     padding: 0;
     box-sizing: border-box;
 }
-
+/* heading and background */
 #topbar{
-    background-color: rgb(153, 198, 248);
+   
+    padding-top: 8%;
+    padding-bottom: 4%;
+    background-image: url(https://images.pexels.com/photos/9259637/pexels-photo-9259637.jpeg?auto=compress&cs=tinysrgb&w=800);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5%;
 }
 
 #toptext{
     font-family: 'Roboto Condensed', sans-serif; 
     text-align: center;
-    font-size: 42px;
+   
+    font-size: 72px;
+    color: transparent;
+    background: conic-gradient(
+        #D9D7F1 17%,
+        #b9a0f0 12%, #b9a0f0 33%,
+        #E7FBBE 33%, #E7FBBE 55%,
+        #FFCBCB 50%, #FFCBCB 70%,
+        #7dc2fa 50%, #7dc2fa 30%,
+        #F7D1BA 87%
+    );
+    background-size: 40%;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    animation: expand-reverse 3s ease forwards;
+}
+#toptext:hover {
+ animation: expand 3s ease forwards;
 }
 
+@keyframes expand {
+    0% {
+        background-size: 20%;
+        background-position: 0 0;
+    }
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 325%;
+        background-position: -7em -4em;
+    }
+}
+
+@keyframes expand-reverse {
+    0% {
+        background-size: 325%;
+        background-position: -7em -4em;
+    }
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 20%;
+        background-position: 0em 0em;
+    }
+}
+/* end of heading and background */
 body{
     font-family: 'Inter', sans-serif;
 }
@@ -32,10 +86,12 @@ main{
     flex-direction: row;
     align-items: center;
     padding: 3%
+    
 }
 
 .input{
-    margin: 100px 0px 0px 150px;
+    margin: 50px 20px 40px 250px;
+    
 }
 
 input[type="text"]{
@@ -48,7 +104,9 @@ input[type="text"]{
     border: none;
     border-radius: 10px;
     padding: 10px 10px;
+    margin-right: 20px;
 }
+
 input[type="submit"]{
     height: 50px;
     width: 100px;
@@ -58,6 +116,12 @@ input[type="submit"]{
     font-size: 20px;
     border: none;
     border-radius: 10px;
-    margin-left: 20px;
+    margin: 10px 20px 60px 0px
+   
 }
 
+@media screen and (max-width:800px){
+    .weather #topbar #toptext .input .display {
+        width:100%
+    }
+}
