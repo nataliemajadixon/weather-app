@@ -80,17 +80,32 @@ body{
     text-align: center;
 }
 
-main{
+#weather{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(179, 223, 255);
+    padding-bottom: 200px;
+
+}
+
+#weather > div {
+    /* background-color: #cbbcec; */
+    margin: 30px 60px 30px 60px;
+    padding: 50px 20px 50px 20px;
+}
+    
+/* main{
     background-color: green;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 3%
     
-}
+} */
 
 .input{
     margin: 50px 20px 40px 250px;
+    
     
 }
 
@@ -101,24 +116,48 @@ input[type="text"]{
     font-family: 'Roboto Condensed', sans-serif; 
     font-weight: 20px;
     font-size: 20px;
-    border: none;
+    border: solid black 1px;
+   margin-top: 10px;
     border-radius: 10px;
-    padding: 10px 10px;
+    padding: 12px 10px;
     margin-right: 20px;
+    margin-bottom: 30px;
 }
 
-input[type="submit"]{
+.button1{
     height: 50px;
-    width: 100px;
+    width: 125px;
     background-color: rgb(236, 241, 203);
     font-family: 'Roboto Condensed', sans-serif; 
     font-weight: 20px;
     font-size: 20px;
-    border: none;
+    border: solid black 1px;
     border-radius: 10px;
-    margin: 10px 20px 60px 0px
+    margin: 0px 20px 20px 0px
    
 }
+
+#information1{
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-size: 30px;
+    /* border: solid black 1pt; */
+}
+
+
+.currentuser{
+    height: 50px;
+    width: 400px;
+    background-color: rgb(236, 241, 203);
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 20px;
+    font-size: 20px;
+    border: solid black 1px;
+    border-radius: 10px;
+    margin: 10px 20px 40px 0px;
+    
+}
+
+
 
 @media screen and (max-width:800px){
     .weather #topbar #toptext .input .display {
