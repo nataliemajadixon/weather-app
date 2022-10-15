@@ -32,11 +32,14 @@ const locationofuser = () => {
             let clouds = document.createElement('p');
             clouds.innerHTML = `Clouds: ${data.clouds.all}%`
 
-            let weatherIcon = document.createElement('img');
-            weatherIcon.setAttribute("src", data.weather[0].icon)
+            let weatherIcon = document.createElement('img')
 
+            let iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+            
+            weatherIcon.setAttribute("src", iconURL)
+           
 
-          
+           
             information1.innerHTML = `The tempurature in ${data.name} is  ${data.main.temp}°` 
             information1.appendChild(feelsLike)
             information1.appendChild(temp_max)
@@ -45,9 +48,7 @@ const locationofuser = () => {
             information1.appendChild(humidity)
             information1.appendChild(wind)
             information1.appendChild(weatherIcon)
-
-          
-
+           
 
 
 
@@ -70,7 +71,7 @@ var information1 = document.querySelector("#information1") ;
 
 var inputValue = document.querySelector('.input-value');
 
-
+console.log(information1)
 
     function getWeather(){
         const apiURL = 'https://api.openweathermap.org/data/2.5/weather?q=' +inputValue.value+ '&units=imperial&appid=f94db0bc7c75590e5b53bfe2a0feeab9'
@@ -97,11 +98,13 @@ var inputValue = document.querySelector('.input-value');
             let clouds = document.createElement('p');
             clouds.innerHTML = `Clouds: ${data.clouds.all}%`
 
-            let weatherIcon = document.createElement('img');
-            weatherIcon.setAttribute("src", data.weather[0].icon)
+            let weatherIcon = document.createElement('img')
 
-
+            let iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+            
+            weatherIcon.setAttribute("src", iconURL)
           
+           
             information1.innerHTML = `The tempurature in ${data.name} is  ${data.main.temp}°` 
             information1.appendChild(feelsLike)
             information1.appendChild(temp_max)
@@ -110,6 +113,7 @@ var inputValue = document.querySelector('.input-value');
             information1.appendChild(humidity)
             information1.appendChild(wind)
             information1.appendChild(weatherIcon)
+          
 
           
          
